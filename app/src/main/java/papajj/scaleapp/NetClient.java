@@ -82,8 +82,8 @@ public class NetClient extends Thread {
             msgOut[3] = (byte) cnt;
             msgOut[4] = (byte) (cmdOut & 0xFF);
             msgOut[5] = (byte) ((cmdOut >> 8) & 0xFF);
-            msgOut[5] = (byte) ((cmdOut >> 16) & 0xFF);
-            msgOut[5] = (byte) ((cmdOut >> 24) & 0xFF);
+            msgOut[6] = (byte) ((cmdOut >> 16) & 0xFF);
+            msgOut[7] = (byte) ((cmdOut >> 24) & 0xFF);
             crc = crc16.Calculate(msgOut, 15, 1);
             msgOut[16] = (byte) (crc & 0xFF);
             msgOut[17] = (byte) ((crc >> 8) & 0xFF);

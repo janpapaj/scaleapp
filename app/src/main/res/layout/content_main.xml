@@ -43,35 +43,40 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="" />
+                    android:text=""
+                    android:enabled="false"/>
 
                 <CheckBox
                     android:id="@+id/led2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="" />
+                    android:text=""
+                    android:enabled="false"/>
 
                 <CheckBox
                     android:id="@+id/led3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="" />
+                    android:text=""
+                    android:enabled="false"/>
 
                 <CheckBox
                     android:id="@+id/led4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="" />
+                    android:text=""
+                    android:enabled="false"/>
 
                 <CheckBox
                     android:id="@+id/led5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="" />
+                    android:text=""
+                    android:enabled="false"/>
             </LinearLayout>
 
             <LinearLayout
@@ -85,35 +90,35 @@
                     android:layout_width="wrap_content"
                     android:layout_height="90dp"
                     android:layout_weight="1"
-                    android:text="Button" />
+                    android:text="F1" />
 
                 <Button
                     android:id="@+id/bt2"
                     android:layout_width="wrap_content"
                     android:layout_height="100dp"
                     android:layout_weight="1"
-                    android:text="Button" />
+                    android:text="F2" />
 
                 <Button
                     android:id="@+id/bt3"
                     android:layout_width="wrap_content"
                     android:layout_height="100dp"
                     android:layout_weight="1"
-                    android:text="Button" />
+                    android:text="F3" />
 
                 <Button
                     android:id="@+id/bt4"
                     android:layout_width="wrap_content"
                     android:layout_height="100dp"
                     android:layout_weight="1"
-                    android:text="Button" />
+                    android:text="F4" />
 
                 <Button
                     android:id="@+id/bt5"
                     android:layout_width="wrap_content"
                     android:layout_height="100dp"
                     android:layout_weight="1"
-                    android:text="Button" />
+                    android:text="F5" />
             </LinearLayout>
 
             <LinearLayout
@@ -126,35 +131,35 @@
                     android:layout_width="wrap_content"
                     android:layout_height="100dp"
                     android:layout_weight="1"
-                    android:text="Button" />
+                    android:text="F6" />
 
                 <Button
                     android:id="@+id/bt7"
                     android:layout_width="wrap_content"
                     android:layout_height="100dp"
                     android:layout_weight="1"
-                    android:text="Button" />
+                    android:text="F7" />
 
                 <Button
                     android:id="@+id/bt8"
                     android:layout_width="wrap_content"
                     android:layout_height="100dp"
                     android:layout_weight="1"
-                    android:text="Button" />
+                    android:text="F8" />
 
                 <Button
                     android:id="@+id/bt9"
                     android:layout_width="wrap_content"
                     android:layout_height="100dp"
                     android:layout_weight="1"
-                    android:text="Button" />
+                    android:text="F9" />
 
                 <Button
                     android:id="@+id/bt10"
                     android:layout_width="wrap_content"
                     android:layout_height="100dp"
                     android:layout_weight="1"
-                    android:text="Button" />
+                    android:text="F10" />
 
             </LinearLayout>
         </LinearLayout>

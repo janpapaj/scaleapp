@@ -64,6 +64,11 @@ public class MainActivity extends AppCompatActivity {
                 int dispVal = cmdIn & 0xFFFF;
                 tvDisp.setText(Float.toString(dispVal / 10.0f));
                 int ledState = (cmdIn >> 16) & 0xFF;
+                if ((ledState & 1 << 0) != 0) led1.setChecked(true); else led1.setChecked(false);
+                if ((ledState & 1 << 1) != 0) led2.setChecked(true); else led2.setChecked(false);
+                if ((ledState & 1 << 2) != 0) led3.setChecked(true); else led3.setChecked(false);
+                if ((ledState & 1 << 3) != 0) led4.setChecked(true); else led4.setChecked(false);
+                if ((ledState & 1 << 4) != 0) led5.setChecked(true); else led5.setChecked(false);
 
                 int cmdOut = 0;
                 if (bt1.isPressed()) cmdOut = 1;
@@ -77,7 +82,6 @@ public class MainActivity extends AppCompatActivity {
                 if (bt9.isPressed()) cmdOut |= 1 << 8;
                 if (bt10.isPressed()) cmdOut |= 1 << 9;
                 nc.SetCmd(cmdOut);
-
             }
             else {
                 tvConn.setText("Nepřipojeno");
