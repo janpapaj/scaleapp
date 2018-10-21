@@ -7,7 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.CheckBox;
 import android.widget.TextView;
 
@@ -38,28 +38,24 @@ public class MainActivity extends AppCompatActivity {
 
     final Runnable myRunnable = new Runnable() {
         public void run() {
-            TextView tvConn = (TextView) findViewById(R.id.tvConn);
             TextView tvDisp = (TextView) findViewById(R.id.disp);
-            Button bt1 = (Button) findViewById(R.id.bt1);
-            Button bt2 = (Button) findViewById(R.id.bt2);
-            Button bt3 = (Button) findViewById(R.id.bt3);
-            Button bt4 = (Button) findViewById(R.id.bt4);
-            Button bt5 = (Button) findViewById(R.id.bt5);
-            Button bt6 = (Button) findViewById(R.id.bt6);
-            Button bt7 = (Button) findViewById(R.id.bt7);
-            Button bt8 = (Button) findViewById(R.id.bt8);
-            Button bt9 = (Button) findViewById(R.id.bt9);
-            Button bt10 = (Button) findViewById(R.id.bt10);
+            ImageButton bt1 = (ImageButton) findViewById(R.id.bt1);
+            ImageButton bt2 = (ImageButton) findViewById(R.id.bt2);
+            ImageButton bt3 = (ImageButton) findViewById(R.id.bt3);
+            ImageButton bt4 = (ImageButton) findViewById(R.id.bt4);
+            ImageButton bt5 = (ImageButton) findViewById(R.id.bt5);
+            ImageButton bt6 = (ImageButton) findViewById(R.id.bt6);
+            ImageButton bt7 = (ImageButton) findViewById(R.id.bt7);
+            ImageButton bt8 = (ImageButton) findViewById(R.id.bt8);
+            ImageButton bt9 = (ImageButton) findViewById(R.id.bt9);
+            ImageButton bt10 = (ImageButton) findViewById(R.id.bt10);
 
             CheckBox led1 = (CheckBox) findViewById(R.id.led1);
             CheckBox led2 = (CheckBox) findViewById(R.id.led2);
             CheckBox led3 = (CheckBox) findViewById(R.id.led3);
             CheckBox led4 = (CheckBox) findViewById(R.id.led4);
-            CheckBox led5 = (CheckBox) findViewById(R.id.led5);
 
             if(nc.GetOnline()) {
-                tvConn.setText("Připojeno");
-
                 int cmdIn = nc.GetCmd();
                 int dispVal = cmdIn & 0xFFFF;
                 tvDisp.setText(Float.toString(dispVal / 10.0f));
@@ -68,7 +64,6 @@ public class MainActivity extends AppCompatActivity {
                 if ((ledState & 1 << 1) != 0) led2.setChecked(true); else led2.setChecked(false);
                 if ((ledState & 1 << 2) != 0) led3.setChecked(true); else led3.setChecked(false);
                 if ((ledState & 1 << 3) != 0) led4.setChecked(true); else led4.setChecked(false);
-                if ((ledState & 1 << 4) != 0) led5.setChecked(true); else led5.setChecked(false);
 
                 int cmdOut = 0;
                 if (bt1.isPressed()) cmdOut = 1;
@@ -84,8 +79,7 @@ public class MainActivity extends AppCompatActivity {
                 nc.SetCmd(cmdOut);
             }
             else {
-                tvConn.setText("Nepřipojeno");
-                tvDisp.setText("-----");
+                tvDisp.setText("0000000");
             }
         }
     };
