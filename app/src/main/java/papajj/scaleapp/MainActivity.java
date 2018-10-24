@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
             ImageButton bt8 = (ImageButton) findViewById(R.id.bt8);
             ImageButton bt9 = (ImageButton) findViewById(R.id.bt9);
             ImageButton bt10 = (ImageButton) findViewById(R.id.bt10);
+            ImageButton bt11 = (ImageButton) findViewById(R.id.bt11);
 
             CheckBox led1 = (CheckBox) findViewById(R.id.led1);
             CheckBox led2 = (CheckBox) findViewById(R.id.led2);
@@ -76,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
                 if (bt8.isPressed()) cmdOut |= 1 << 7;
                 if (bt9.isPressed()) cmdOut |= 1 << 8;
                 if (bt10.isPressed()) cmdOut |= 1 << 9;
+                if (bt11.isPressed()) cmdOut |= 1 << 10;
                 nc.SetCmd(cmdOut);
             }
             else {

@@ -22,7 +22,8 @@ public class NetClient extends Thread {
     private boolean online = false;
     private int cnt;
     private int cmdOut;
-    private int cmdIn;
+    private String disp;
+    private byte leds;
 
     final byte PS = (byte) 0xAA;
 
@@ -39,8 +40,12 @@ public class NetClient extends Thread {
         cmdOut = cmd;
     }
 
-    public int GetCmd() {
-        return cmdIn;
+    public String GetDisplay() {
+        return disp;
+    }
+
+    public byte GetLeds() {
+        return leds;
     }
 
     private int Sync() {
@@ -60,10 +65,11 @@ public class NetClient extends Thread {
                 int crcTmp = (int)(msg[15] << 8 | msg[14]) & 0xffff;
                 if(crc == crcTmp)
                 {
-                    cmdIn = (int)(msg[4] |
-                                  msg[5] << 8 |
-                                  msg[6] << 16 |
-                                  msg[7] << 24);
+                    byte[] strBuf = new byte[32];
+                    for(int i = 0; i < 7; i++)
+                    {
+
+                    }
                 }
             }
             else
